@@ -7,7 +7,7 @@
     font: inherit;
 }
 
-img, svg {
+img, svg, picture {
     display: block;
     max-width: 100%;
 }
@@ -50,7 +50,12 @@ body {
 
 .product-card {
     --border-radius: .8rem;
+    margin-inline: 1rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
 
+    border-radius: var(--border-radius);
+    overflow: hidden;
     max-width:  37rem;
     display: grid;
 }
@@ -62,8 +67,8 @@ img {
 .product-info {
     display: grid;
     align-content: start;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 1.2rem;
+    padding: 1.5rem;
     background-color: var(--clr-neutral-300);
 }
 
@@ -132,8 +137,11 @@ img {
 @media (min-width: 600px) {
     .product-card {
         grid-template-columns: 1fr 1fr;
-        border-radius: var(--border-radius);
-        overflow: hidden;
+        
     }
     
+    .product-info {
+        gap: 1.5rem;
+        padding: 2rem;
+    }
 }
